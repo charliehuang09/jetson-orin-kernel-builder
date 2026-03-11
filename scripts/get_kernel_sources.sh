@@ -63,6 +63,9 @@ log() {
 L4T_MAJOR=$(sed -n 's/^.*R\([0-9]\+\).*/\1/p' /etc/nv_tegra_release)
 L4T_MINOR=$(sed -n 's/^.*REVISION: \([0-9]\+\(\.[0-9]\+\)*\).*/\1/p' /etc/nv_tegra_release)
 
+echo $L4T_MINOR
+L4T_MINOR="4.4"
+
 KERNEL_SRC_DIR="/home/nvidia/l4t/r${L4T_MAJOR}.${L4T_MINOR}/"
 mkdir -p ${KERNEL_SRC_DIR}
 
